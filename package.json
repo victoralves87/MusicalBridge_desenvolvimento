@@ -1,0 +1,24 @@
+{
+  "name": "back-musicalbridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoralves87/back-MusicalBridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victoralves87/back-MusicalBridge/issues"
+  },
+  "homepage": "https://github.com/victoralves87/back-MusicalBridge#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
