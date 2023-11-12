@@ -1,21 +1,16 @@
-require("dotenv").config();
 const express = require("express");
-const path = require("path"); // Adicionando o módulo path
+const path = require("path");
 const router = require("./src/router");
 const app = express();
 
 // Middleware para analisar dados JSON
 app.use(express.json());
 
-// Middleware para servir arquivos estáticos do diretório 'public'
-app.use(express.static(path.join(__dirname, "public")));
+// Middleware para analisar dados de formulário
+app.use(express.urlencoded({ extended: true }));
 
 // Usando o roteador
 app.use("/", router);
-
-// No seu arquivo index.js
-app.use(express.static(path.join(__dirname, "public")));
-
 
 // Rota principal
 app.get("/", (req, res) => {

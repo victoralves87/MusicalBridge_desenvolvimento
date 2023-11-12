@@ -3,6 +3,13 @@ require("dotenv").config();
 
 const pool = mysql.createPool(process.env.CONNECTION_STRING);
 
+async function insertCustomer(customer) {
+  console.log('Dados Recebidos na Função insertCustomer:', customer);
+
+  const { nome, idade, email, senha } = customer;
+  await pool.query("INSERT INTO usuarios (nome, idade, email, senha) VALUES (?, ?, ?, ?)", [nome, idade, email, senha]);
+}
+
 async function selectCustomers() {
   const [rows] = await pool.query("SELECT * FROM usuarios");
   return rows;
@@ -13,10 +20,7 @@ async function selectCustomer(id) {
   return rows[0];
 }
 
-async function insertCustomer(customer) {
-  const { nome, idade, email, senha } = customer;
-  await pool.query("INSERT INTO usuarios (nome, idade, email, senha) VALUES (?, ?, ?, ?)", [nome, idade, email, senha]);
-}
+
 
 async function updateCustomer(id, customerData) {
   const { nome, idade, email, senha } = customerData;
