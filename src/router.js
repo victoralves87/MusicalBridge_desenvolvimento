@@ -26,8 +26,10 @@ router.post("/clientes", (req, res) => {
 });
 
 // Rota GET (lista todos os clientes)
-router.get("/clientes", (req, res) => {
-    res.json(db.selectCustomers());
+router.get("/clientes", async (req, res) => {
+
+    const results = await db.selectCustomers();
+    res.json(results);
 });
 
 // Rota GET por ID

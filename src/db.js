@@ -1,17 +1,12 @@
-const customers = [{
+const mysql = require("mysql2/promise");
 
-    id: 1,
-    nome: "victor",
-    idade:19,
-    email:"victoralves",
-    senha:123456
-
-}];
+const usuario = mysql.createPool(process.env.CONNECTION_STRING);
 
 
-function selectCustomers(){
+ async function selectCustomers(){
 
-    return customers;
+    const results = await usuario.query("select * from usuarios");
+    return results[0];
 }
 
 
