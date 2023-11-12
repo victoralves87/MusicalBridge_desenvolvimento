@@ -1,50 +1,36 @@
 const mysql = require("mysql2/promise");
+require("dotenv").config();
 
-const usuario = mysql.createPool(process.env.CONNECTION_STRING);
+const pool = mysql.createPool(process.env.CONNECTION_STRING);
 
-
- async function selectCustomers(){
-
-    const results = await usuario.query("select * from usuarios");
-    return results[0];
+async function selectCustomers() {
+  const [rows] = await pool.query("SELECT * FROM usuarios");
+  return rows;
 }
 
-
-function selectCustomer(id){
-
-    return customers.find(c => c.id === id);
+async function selectCustomer(id) {
+  const [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ?", [id]);
+  return rows[0];
 }
 
-
-function insertCustomer(customer){
-
-    customers.push(customer);
+async function insertCustomer(customer) {
+  const { nome, idade, email, senha } = customer;
+  await pool.query("INSERT INTO usuarios (nome, idade, email, senha) VALUES (?, ?, ?, ?)", [nome, idade, email, senha]);
 }
 
-
-function updateCustomer(id, customerData){
-    const customer = customers.find(c => c.id === id);
-    if (!customer) return;
-    customer.nome = customerData.nome;  // Correção aqui
-    customer.idade = customerData.idade;  // Correção aqui
-    customer.email = customerData.email;
-    customer.senha = customerData.senha;
+async function updateCustomer(id, customerData) {
+  const { nome, idade, email, senha } = customerData;
+  await pool.query("UPDATE usuarios SET nome=?, idade=?, email=?, senha=? WHERE id=?", [nome, idade, email, senha, id]);
 }
 
-
-function deleteCustomer(id){
-
-    const index = customers.findIndex(c => c.id ===  id);
-    customers.splice(index, 1);
+async function deleteCustomer(id) {
+  await pool.query("DELETE FROM usuarios WHERE id=?", [id]);
 }
-
-
 
 module.exports = {
-    
-    selectCustomers,
-    selectCustomer, 
-    insertCustomer,
-    updateCustomer,
-    deleteCustomer
-}
+  selectCustomers,
+  selectCustomer,
+  insertCustomer,
+  updateCustomer,
+  deleteCustomer,
+};
