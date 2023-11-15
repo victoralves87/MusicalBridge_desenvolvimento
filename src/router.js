@@ -29,6 +29,17 @@ router.get("/eventos.ejs", (req, res) => {
   res.render("eventos");
 });
 
+// Rota GET para a página de login
+router.get("/login.ejs", (req, res) => {
+  // Lógica para renderizar a página de login
+  res.render("login");
+});
+
+// Rota GET para a página de cadastro
+router.get("/cadastre.ejs", (req, res) => {
+  // Lógica para renderizar a página de cadastro
+  res.render("cadastre");
+});
 
 
 
