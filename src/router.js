@@ -3,18 +3,36 @@ const router = express.Router();
 const db = require("./db");
 const path = require("path");
 
+
 // Rota GET para a página inicial (home)
 router.get("/", (req, res) => {
   // Redireciona para a rota do formulário
   res.redirect("/home");
 });
 
-// Rota GET para o formulário
+// Rota GET para o home
 router.get("/home", (req, res) => {
   // Renderiza a página do formulário
   const indexPath = path.join(__dirname, "../", "views", "home.ejs");
   res.render(indexPath); // Use res.render para renderizar um arquivo EJS
 });
+
+// Rota GET para a página de músicos
+router.get("/musicos.ejs", (req, res) => {
+  // Lógica para renderizar a página de músicos
+  res.render("musicos");
+});
+
+// Rota GET para a página de eventos
+router.get("/eventos.ejs", (req, res) => {
+  // Lógica para renderizar a página de eventos
+  res.render("eventos");
+});
+
+
+
+
+
 
 // Rota POST
 router.post("/usuarios", async (req, res) => {
