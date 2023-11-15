@@ -42,6 +42,13 @@ router.get("/cadastre.ejs", (req, res) => {
   res.render("cadastre");
 });
 
+// Rota GET para a página de sobre
+router.get("/sobre.ejs", (req, res) => {
+  // Lógica para renderizar a página de cadastro
+  res.render("sobre");
+});
+
+
 
 
 
