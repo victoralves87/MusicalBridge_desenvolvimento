@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="imagens-site/logo MB.png">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Musical Bridge</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/gaia.css" rel="stylesheet"/>
+    
+        <!--     Fonts and icons     -->
+        <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/meucss.css">
+        <link href="/website/css/uicons-bold-rounded.css"
+        rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/rotating-card.css" rel="stylesheet" />
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#sobre {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 2;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+#about {
+	padding: 40px;
+	text-align: center;
+}
+
+#about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+#about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
+}
+
+.social a {
+	margin: 0 5px;
+}
+  </style>
+</head>
+<body id="sobre">
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a style="color: rgb(218, 160, 14);" class="logo" href="index.html" class="navbar-brand">
+                    Musical-Bridge
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;"  href="musicos.html">Musicos</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="eventos.html">Eventos</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(231, 170, 17); font-weight: bolder;" href="login.html">Entrar</a>
+                    </li>
+                    <li>
+                        <a style="background-color: rgba(148, 5, 167, 0.39); border-color:rgba(148, 5, 167, 0.582) ;" href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <section id="about">
+        <h1>Sobre Nós</h1>
+        <p>
+            Na Musical-Bridge, acreditamos que o talento musical deve ser reconhecido e recompensado de forma justa. Muitos músicos talentosos buscam oportunidades para fazer freelance, seja para tocar em eventos, gravações de estúdio, ou em outros projetos musicais. Nossa missão é simples e poderosa: conectar músicos a oportunidades de trabalho, gerando renda para aqueles que compartilham sua paixão pela música.
+        </p>
+        <h2>Siga-nos nas nossas redes sociais.</h2>
+
+    </section>
+
+    
+
+    <footer class="footer footer-big footer-color-black" data-color="black">    
+        <div class="container">
+            
+                <div class="col-md-2 col-md-offset-2 col-sm-3">
+                    
+                    <div class="info">
+                        
+                        <h5 class="title">Links rapidos</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="index.html">Home</a></li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="musicos.html">Musicos</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="eventos.html">Evento</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="login.html">Cadastre-se</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Sobre a Empresa</h5>
+                         <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Sobre nós</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Contato</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Redes Sociais</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                        <i class="fa fa-facebook-square"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                        <i class="fa fa-dribbble"></i> Dribbble
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                        <i class="fa fa-google-plus-square"></i> Google+
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script> Musical-Bridge, feito para você
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Encontre o botão "About Us" pelo ID e adicione um ouvinte de evento de clique
+          var aboutButton = document.querySelector('a[href="#about"]');
+          if (aboutButton) {
+            aboutButton.addEventListener("click", function(event) {
+              event.preventDefault(); // Evita o comportamento padrão de clicar em um link
+        
+              // Encontre a seção "about" pelo ID
+              var aboutSection = document.getElementById('about');
+              
+              // Verifique se a seção "about" foi encontrada
+              if (aboutSection) {
+                // Role suavemente para a seção "about"
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            });
+          }
+        });
+        </script>
+</body>
+
+    
+
+<!--   core js files    -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+
+<!--  js library for devices recognition -->
+<script type="text/javascript" src="assets/js/modernizr.js"></script>
+
+<!--  script for google maps   -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
+<script type="text/javascript" src="assets/js/gaia.js"></script>
+</html>

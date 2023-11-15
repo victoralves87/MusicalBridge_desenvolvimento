@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    #form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-section {
+      display: none;
+    }
+    .form-section.active {
+      display: block;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro</h1>
+
+  <div id="form-container">
+    <div>
+      <button id="cliente-button">Cliente</button>
+      <button id="vendedor-button">Vendedor</button>
+      <button id="voltar-button" style="display: none;">Voltar</button>
+    </div>
+    
+    <div id="cliente-form" class="form-section">
+      <h2>Informações do Cliente</h2>
+      <form id="form-cliente">
+        <!-- Campos do cliente -->
+        <label for="nome_cliente">Nome:</label>
+        <input type="text" name="nome_cliente" id="nome_cliente"><br>
+        <label for="email_cliente">E-mail:</label>
+        <input type="text" name="email_cliente" id="email_cliente"><br>
+        <!-- Outros campos do cliente -->
+      </form>
+    </div>
+
+    <div id="vendedor-form" class="form-section">
+      <h2>Informações do Vendedor</h2>
+      <form id="form-vendedor">
+        <!-- Campos do vendedor -->
+        <label for="nome_vendedor">Nome:</label>
+        <input type="text" name="nome_vendedor" id="nome_vendedor"><br>
+        <label for "email_vendedor">E-mail:</label>
+        <input type="text" name="email_vendedor" id="email_vendedor"><br>
+        <!-- Outros campos do vendedor -->
+      </form>
+    </div>
+
+    <button id="submit-button" style="display: none;">Enviar</button>
+
+    <div class="card-footer text-center pt-0 px-lg-2 px-1">
+      <p class="mb-2 text-sm mx-auto">
+        Já tem uma conta?
+        <a href="login.html" class="text-primary text-gradient font-weight-bold">Entrar</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const clienteButton = document.getElementById('cliente-button');
+    const vendedorButton = document.getElementById('vendedor-button');
+    const voltarButton = document.getElementById('voltar-button');
+    const clienteForm = document.getElementById('cliente-form');
+    const vendedorForm = document.getElementById('vendedor-form');
+    const submitButton = document.getElementById('submit-button');
+
+    clienteButton.addEventListener('click', () => {
+      clienteForm.classList.add('active');
+      vendedorForm.classList.remove('active');
+      submitButton.style.display = 'block';
+      voltarButton.style.display = 'block';
+      clienteButton.style.display = 'none';
+      vendedorButton.style.display = 'none';
+    });
+
+    vendedorButton.addEventListener('click', () => {
+      clienteForm.classList.remove('active');
+      vendedorForm.classList.add('active');
+      submitButton.style.display = 'block';
+      voltarButton.style.display = 'block';
+      clienteButton.style.display = 'none';
+      vendedorButton.style.display = 'none';
+    });
+
+    voltarButton.addEventListener('click', () => {
+      clienteForm.classList.remove('active');
+      vendedorForm.classList.remove('active');
+      submitButton.style.display = 'none';
+      voltarButton.style.display = 'none';
+      clienteButton.style.display = 'block';
+      vendedorButton.style.display = 'block';
+    });
+
+    submitButton.addEventListener('click', () => {
+      // Implemente a lógica para enviar o formulário aqui
+    });
+  </script>
+</body>
+</html>

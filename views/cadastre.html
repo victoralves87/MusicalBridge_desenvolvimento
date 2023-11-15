@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+<link rel="icon" type="image/png" sizes="96x96" href="imagens-site/logo MB.png">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Musical Bridge</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/gaia.css" rel="stylesheet"/>
+
+  <!--     Fonts and icons     -->
+  <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/meucss.css">
+  <link href="/website/css/uicons-bold-rounded.css"
+  rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/rotating-card.css" rel="stylesheet" />
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/material-dashboard-bs4/assets/css/material-dashboard.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+
+  <style>
+
+    h1 {
+        font-family:'Times New Roman', Times, serif;
+        margin-top: -20px;
+        color: rgba(243, 200, 57, 0.993);
+        text-align: center;
+        }
+
+
+        #form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+            background-color: #fff; /* Define uma cor de fundo para separar do plano de fundo da página */
+            border-radius: 10px; /* Adiciona cantos arredondados */
+            padding: 20px; /* Adiciona espaço interno */
+            margin-left: 35px;
+        }
+
+
+        .form-section {
+          display: none;
+        }
+
+
+        .form-section.active {
+          display: block;
+        }
+
+        .form-control{
+          background-color: rgba(247, 206, 70, 0.849);
+            border: none;
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+        }
+
+
+        label {
+          display: block;
+          margin-top: 10px;
+        }
+
+        .custom-nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .custom-button {
+          border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            width: 130px;
+            background-color: #2071c8;
+            color: #fff;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .botaocadastro{
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            width: 130px;
+            background-color: #7e57c2;
+            color: #fff;
+
+        }
+
+        .custom-button:hover {
+            transform: scale(1.1);
+        }
+
+        .purple-input-label {
+            color: #7e57c2; /* Cor roxo claro */
+        }
+
+        .jatem{
+
+          color: #5006cf;
+        }
+
+
+        
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent navbar-fixed-top">
+    <div class="menu-cadastro" class="container">
+      <div class="navbar-header">
+        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar bar1"></span>
+          <span class="icon-bar bar2"></span>
+          <span class="icon-bar bar3"></span>
+        </button>
+        <a class="logo" class="logo navbar-brand" href="index.html" style="color: rgb(218, 160, 14);">Musical-Bridge</a>
+      </div>
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="color: rgb(218, 160, 14); font-weight: bolder;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="musicos.html" style="color: rgb(218, 160, 14); font-weight: bolder;">Musicos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventos.html" style="color: rgb(218, 160, 14); font-weight: bolder;">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" style="color: rgb(231, 170, 17); font-weight: bolder;">Entrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-danger btn-fill" href="http://www.creative-tim.com/product/gaia-bootstrap-template" style="background-color: rgba(148, 5, 167, 0.39); border-color: rgba(148, 5, 167, 0.582);">Cadastre-se</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="imagens-site/usuario-do-circulo.png" alt="perfil">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Meu Perfil</a>
+              <a class= "dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+        <!-- Lado esquerdo com imagem (60%) -->
+        <div class="col-6">
+            <img style="padding-bottom: 10px; border-radius: 6px;" src="assets/img/illustrations/illustration-signup.jpg" class="img-fluid" alt="Imagem">
+        </div>
+        <!-- Lado direito com formulário -->
+        <div style="margin-left: 35px;" class="col-4">
+            <div class="p-4 ">
+                <div id="form-container">
+                    <h1>Cadastro</h1>
+                    <div class="text-center mb-3 buttons-container">
+                        <div class="mb-2">
+                            <button class="botaocadastro" id="cliente-button" class="custom-button">Contratante</button>
+                           
+                        </div>
+                        <div class="mb-2">
+                            <button class="botaocadastro" id="vendedor-button" class="custom-button">Músico</button>
+                        </div>
+                        
+                    </div>
+                    <button id="voltar-button" style="display: none;">Voltar</button>
+
+                    <div id="cliente-form" class="form-section">
+                        <h2>Informações do Contratante</h2>
+                        <form id="form-cliente">
+                            <!-- Campos do cliente -->
+                            <div class="form-group text-center">
+                                <label for="nome_cliente" class="purple-input-label">Nome:</label>
+                                <input type="text" name="nome_cliente" id="nome_cliente" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="idade_cliente" class="purple-input-label">Idade:</label>
+                                <input type="number" name="idade_cliente" id="idade_cliente" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="email_cliente" class="purple-input-label">E-mail:</label>
+                                <input type="text" name="email_cliente" id="email_cliente" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="senha_cliente" class="purple-input-label">Senha:</label>
+                                <input type="password" name="senha_cliente" id="senha_cliente" class="form-control">
+                            </div>
+                            <!-- Outros campos do cliente -->
+                        </form>
+                    </div>
+
+                    <div id="vendedor-form" class="form-section">
+                        <h2>Informações do Músico</h2>
+                        <form id="form-vendedor">
+                            <!-- Campos do vendedor -->
+                            <div class="form-group text-center">
+                                <label for="nome_vendedor" class="purple-input-label">Nome artístico:</label>
+                                <input type="text" name="nome_vendedor" id="nome_vendedor" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="idade_vendedor" class="purple-input-label">Idade:</label>
+                                <input type="number" name="idade_vendedor" id="idade_vendedor" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="email_vendedor" class="purple-input-label">E-mail:</label>
+                                <input type="text" name="email_vendedor" id="email_vendedor" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="senha_vendedor" class="purple-input-label">Senha:</label>
+                                <input type="password" name="senha_vendedor" id="senha_vendedor" class="form-control">
+                            </div>
+                            <!-- Outros campos do vendedor -->
+                        </form>
+                    </div>
+
+                    <button id="submit-button" style="display: none;">Enviar</button>
+                    <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                        <p class="mb-2 text-sm mx-auto">
+                            Já tem uma conta?
+                            <a class="jatem" href="login.html" class="text-primary text-gradient font-weight-bold">Entrar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <footer class="footer footer-big footer-color-black" data-color="black">    
+    <div class="container">
+        
+            <div class="col-md-2 col-md-offset-2 col-sm-3">
+                
+                <div class="info">
+                    
+                    <h5 class="title">Links rapidos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="index.html">Home</a></li>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="musicos.html">Musicos</a>
+                            </li>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="eventos.html">Evento</a>
+                            </li>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="login.html">Cadastre-se</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-3">
+                <div class="info">
+                    <h5 class="title">Sobre a Empresa</h5>
+                     <nav>
+                        <ul>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="sobre.html">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="#">Contato</a>
+                            </li>
+                            <li>
+                                <a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-3">
+                <div class="info">
+                    <h5 class="title">Redes Sociais</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                    <i class="fa fa-facebook-square"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                    <i class="fa fa-dribbble"></i> Dribbble
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                    <i class="fa fa-google-plus-square"></i> Google+
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+             © <script> document.write(new Date().getFullYear()) </script> Musical-Bridge, feito para você
+        </div>
+    </div>
+</footer>
+  <!--   Core JS Files   -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/js/modernizr.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="assets/js/gaia.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+
+  <script>
+    const clienteButton = document.getElementById('cliente-button');
+    const vendedorButton = document.getElementById('vendedor-button');
+    const voltarButton = document.getElementById('voltar-button');
+    const clienteForm = document.getElementById('cliente-form');
+    const vendedorForm = document.getElementById('vendedor-form');
+    const submitButton = document.getElementById('submit-button');
+
+    clienteButton.addEventListener('click', () => {
+      clienteForm.classList.add('active');
+      vendedorForm.classList.remove('active');
+      submitButton.style.display = 'block';
+      voltarButton.style.display = 'block';
+      clienteButton.style.display = 'none';
+      vendedorButton.style.display = 'none';
+    });
+
+    vendedorButton.addEventListener('click', () => {
+      clienteForm.classList.remove('active');
+      vendedorForm.classList.add('active');
+      submitButton.style.display = 'block';
+      voltarButton.style.display = 'block';
+      clienteButton.style.display = 'none';
+      vendedorButton.style.display = 'none';
+    });
+
+    voltarButton.addEventListener('click', () => {
+      clienteForm.classList.remove('active');
+      vendedorForm.classList.remove('active');
+      submitButton.style.display = 'none';
+      voltarButton.style.display = 'none';
+      clienteButton.style.display = 'block';
+      vendedorButton.style.display = 'block';
+    });
+
+    submitButton.addEventListener('click', () => {
+      // Implemente a lógica para enviar o formulário aqui
+    });
+
+
+
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-dashboard.min.js?v=3.1.0"></script>
+</body>
+
+</html>

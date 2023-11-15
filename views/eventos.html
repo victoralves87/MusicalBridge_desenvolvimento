@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="imagens-site/logo MB.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Musical Bridge</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/gaia.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/meucss.css">
+    <link href="/website/css/uicons-bold-rounded.css"
+    rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/rotating-card.css" rel="stylesheet" />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/material-dashboard-bs4/assets/css/material-dashboard.css">
+
+    <style>
+        body{
+            margin-top: 38px;
+            
+        }
+
+
+        .centraliza{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 6px;
+        }
+
+        .navbar-brand{
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            width: 420px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        #search-input {
+            background-color: rgba(247, 206, 70, 0.849);
+            border: none;
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+
+        }
+
+        #search-button {
+            border-color: #6a11bdee;
+            padding: 5px;
+            margin-left: 5px;
+            border-radius: 55%;
+            cursor: pointer;
+        }
+
+        .bar{
+            width:180px;
+            height: 150px;
+            border-radius: 6px;
+            border: 1px 1px  black;
+            cursor: pointer;
+
+        }
+
+
+        .navbar.navbar-fixed-top {
+            background-color: rgba(70, 63, 37, 0.74);
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="100">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a style="color: rgb(218, 160, 14);" class="logo" href="index.html" class="navbar-brand">
+                    Musical-Bridge
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;"  href="musicos.html">Musicos</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="eventos.html">Eventos</a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(231, 170, 17); font-weight: bolder;" href="login.html">Entrar</a>
+                    </li>
+                    <li>
+                        <a style="background-color: rgba(148, 5, 167, 0.39); border-color:rgba(148, 5, 167, 0.582) ;" href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Cadastre-se</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <img src="imagens-site/usuario-do-circulo.png" alt="perfil">
+                        </a>
+                        <!-- Itens do menu dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Meu Perfil</a> <br>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    
+    <section class="fundo-eve">
+    <div class="section section-our-team-freebie">
+        
+        <div class="parallax filter filter-color-black">
+            <div class="image" style="background-image:url('imagens-site/eventos2.jpg')">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <div class="centraliza">
+                                <div class="search-bar">
+                                    <input type="text" placeholder="busque pela localização" id="search-input">
+                                    <button id="search-button"><img src="imagens-site/lupa.png" alt=""></button>
+                                </div>
+                            
+                            </div>
+                            <h2>Busque o melhor Evento para você</h2>
+                            <div class="separator separator-danger">♫</div>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/bardochico.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Bar do chico</h3>
+                                                    <p class="small-text">Olinda/ PE</p>
+                                                    <p class="description">Noite de Seresta: Celebrando os Clássicos da Música Popular no Bar do Chico!
+
+                                                        Data e Hora: Sábado, 25 de novembro de 2023, a partir das 20h
+                                                        
+                                                        Local: Bar do Chico, Rua das Artes, nº 123!!!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/disco.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Bar do Vinil</h3>
+                                                    <p class="small-text">Recife/ PE</p>
+                                                    <p class="description">Prepare-se para uma experiência única na Festa do Vinil no Bar do Vinil! No dia 10 de novembro de 2023, a partir das 19hs, embarque em uma jornada musical repleta de nostalgia e boa música</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/musicfestival.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Festival de Rock </h3>
+                                                    <p class="small-text">Recife/ PE</p>
+                                                    <p class="description">Festival de Rock Alternativo embala à noite do próximo sabádo dia 04/11/2023 , a partir das 17hs na Praça do Arsenal no bairo do Recife, venha conferir e se divertir, vem que é de graça!!!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/lamur.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Galeria Lamur</h3>
+                                                    <p class="small-text">Recife/ PE</p>
+                                                    <p class="description"> Serenata Clássica na Galeria Lamur: A atmosfera da Galeria Lamur, 
+                                                        com suas obras de arte e arquitetura inspiradora, será o cenário perfeito para essa jornada musical.
+
+                                                        Sábado, 15 de dezembro de 2023, às 19h30
+                                                        
+                                                        Galeria Lamur, Rua das Artes, nº 456
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/cordasemadeiras.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Centro de Artes e Música</h3>
+                                                    <p class="small-text">Recife/ PE</p>
+                                                    <p class="description">Gala de Formatura: Harmonia em Cordas e Madeiras
+
+                                                        Data e Hora: Sexta-feira, 17 de novembro de 2023, às 20h
+                                                        
+                                                        Local: Centro de Artes e Música, Rua das Artes, nº 789
+                                                        É com grande alegria que o Centro de Artes e Música convida você para uma noite de pura harmonia e virtuosismo musical.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div>
+                                                    <img  alt="bar" class="bar" src="assets/img/artistasderua.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Centro de Arte Popular Olindar</h3>
+                                                    <p class="small-text">Olinda/ PE</p>
+                                                    <p class="description"> "Raízes e Cores: Uma Jornada pela Cultura Popular"
+
+                                                        Sábado, 25 de novembro de 2023, das 10h às 18h
+                                                        
+                                                        Local: Centro de Arte Popular Olindar, Praça das Artes, nº 234
+                                                        O Centro de Arte Popular Olindar tem o prazer de apresentar "Raízes e Cores", uma jornada pela rica e diversificada cultura popular.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    <footer class="footer footer-big footer-color-black" data-color="black">    
+        <div class="container">
+            
+                <div class="col-md-2 col-md-offset-2 col-sm-3">
+                    
+                    <div class="info">
+                        
+                        <h5 class="title">Links rapidos</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="index.html">Home</a></li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="musicos.html">Musicos</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="eventos.html">Evento</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="login.html">Cadastre-se</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Sobre a Empresa</h5>
+                         <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="sobre.html">Sobre nós</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Contato</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Redes Sociais</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                        <i class="fa fa-facebook-square"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                        <i class="fa fa-dribbble"></i> Dribbble
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                        <i class="fa fa-google-plus-square"></i> Google+
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script> Musical-Bridge, feito para você
+            </div>
+        </div>
+    </footer>
+
+    <!--   core js files    -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/modernizr.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="assets/js/gaia.js"></script>
+    
+</body>
+</html>

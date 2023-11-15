@@ -1,0 +1,73 @@
+@charset "utf-08";
+
+
+.logo{
+    font-weight: bolder;
+    color: white;
+    font-size: 3em;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.logo:hover{
+    color: rgb(236, 108, 85);
+}
+
+
+.logo-footer {
+    float: left;
+    margin-right: 20px; /* Ajuste a margem conforme necessário */
+    width: 50px; /* Defina a largura desejada para tornar a imagem pequena */
+
+}
+
+
+.custom-nav {
+    color: rgba(0, 0, 0, 0.911); /* Substitua pela cor desejada */
+}
+
+
+.paragrafo{
+    font-weight: bolder;
+}
+
+
+
+
+.dropdown-item {
+    color: #000; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-weight: bold; /* Negrito */
+
+}
+
+
+.dropdown-item:hover {
+    background-color: #6812a1d3; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    padding: 10px 20px; /* Espaçamento interno ao passar o mouse */
+}
+
+
+.login{
+    margin-top: 90px;
+    margin-bottom: -50px;
+}
+
+.fundo-login{
+    
+  background-color: #000000af;
+}
+
+.menu-cadastro{
+    background-color:#0000008a;
+    width: 110%;
+    padding:6px;
+    margin-top: -10px;
+    margin-left: -14px;
+    margin-right: -13.5px;
+    margin-bottom: -10px;
+    display: block;
+    
+}

@@ -24,7 +24,7 @@ router.post("/usuarios", async (req, res) => {
     return res.status(400).send('Todos os campos são obrigatórios.');
   }
 
-  await db.insertCustomer(user);
+  await db.insertCustomer (user);
   res.sendStatus(201);
 });
 
