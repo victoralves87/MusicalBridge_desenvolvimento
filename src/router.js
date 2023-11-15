@@ -3,17 +3,17 @@ const router = express.Router();
 const db = require("./db");
 const path = require("path");
 
-// Rota GET para a página inicial (formulário)
+// Rota GET para a página inicial (home)
 router.get("/", (req, res) => {
   // Redireciona para a rota do formulário
-  res.redirect("/formulario");
+  res.redirect("/home");
 });
 
 // Rota GET para o formulário
-router.get("/formulario", (req, res) => {
+router.get("/home", (req, res) => {
   // Renderiza a página do formulário
-  const indexPath = path.join(__dirname, "..", "public", "index.html");
-  res.sendFile(indexPath);
+  const indexPath = path.join(__dirname, "../", "views", "home.ejs");
+  res.render(indexPath); // Use res.render para renderizar um arquivo EJS
 });
 
 // Rota POST
