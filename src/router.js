@@ -4,6 +4,7 @@ const db = require("./db");
 const path = require("path");
 
 
+
 // Rota GET para a página inicial (home)
 router.get("/", (req, res) => {
   // Redireciona para a rota do formulário

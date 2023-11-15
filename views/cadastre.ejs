@@ -173,87 +173,76 @@
 
   <div class="container-fluid">
     <div class="row">
-        <!-- Lado esquerdo com imagem (60%) -->
-        <div class="col-6">
-            <img style="padding-bottom: 10px; border-radius: 6px;" src="assets/img/illustrations/illustration-signup.jpg" class="img-fluid" alt="Imagem">
-        </div>
-        <!-- Lado direito com formulário -->
-        <div style="margin-left: 35px;" class="col-4">
-            <div class="p-4 ">
-                <div id="form-container">
-                    <h1>Cadastro</h1>
-                    <div class="text-center mb-3 buttons-container">
-                        <div class="mb-2">
-                            <button class="botaocadastro" id="cliente-button" class="custom-button">Contratante</button>
-                           
-                        </div>
-                        <div class="mb-2">
-                            <button class="botaocadastro" id="vendedor-button" class="custom-button">Músico</button>
-                        </div>
-                        
-                    </div>
-                    <button id="voltar-button" style="display: none;">Voltar</button>
-
-                    <div id="cliente-form" class="form-section">
-                        <h2>Informações do Contratante</h2>
-                        <form id="form-cliente">
-                            <!-- Campos do cliente -->
-                            <div class="form-group text-center">
-                                <label for="nome_cliente" class="purple-input-label">Nome:</label>
-                                <input type="text" name="nome_cliente" id="nome_cliente" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="idade_cliente" class="purple-input-label">Idade:</label>
-                                <input type="number" name="idade_cliente" id="idade_cliente" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="email_cliente" class="purple-input-label">E-mail:</label>
-                                <input type="text" name="email_cliente" id="email_cliente" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="senha_cliente" class="purple-input-label">Senha:</label>
-                                <input type="password" name="senha_cliente" id="senha_cliente" class="form-control">
-                            </div>
-                            <!-- Outros campos do cliente -->
-                        </form>
-                    </div>
-
-                    <div id="vendedor-form" class="form-section">
-                        <h2>Informações do Músico</h2>
-                        <form id="form-vendedor">
-                            <!-- Campos do vendedor -->
-                            <div class="form-group text-center">
-                                <label for="nome_vendedor" class="purple-input-label">Nome artístico:</label>
-                                <input type="text" name="nome_vendedor" id="nome_vendedor" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="idade_vendedor" class="purple-input-label">Idade:</label>
-                                <input type="number" name="idade_vendedor" id="idade_vendedor" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="email_vendedor" class="purple-input-label">E-mail:</label>
-                                <input type="text" name="email_vendedor" id="email_vendedor" class="form-control">
-                            </div>
-                            <div class="form-group text-center">
-                                <label for="senha_vendedor" class="purple-input-label">Senha:</label>
-                                <input type="password" name="senha_vendedor" id="senha_vendedor" class="form-control">
-                            </div>
-                            <!-- Outros campos do vendedor -->
-                        </form>
-                    </div>
-
-                    <button id="submit-button" style="display: none;">Enviar</button>
-                    <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                        <p class="mb-2 text-sm mx-auto">
-                            Já tem uma conta?
-                            <a class="jatem" href="login.html" class="text-primary text-gradient font-weight-bold">Entrar</a>
-                        </p>
-                    </div>
-                </div>
+      <!-- ... (código HTML omitido para brevidade) ... -->
+      <div style="margin-left: 35px;" class="col-4">
+        <div class="p-4 ">
+          <div id="form-container">
+            <h1>Cadastro</h1>
+            <div class="text-center mb-3 buttons-container">
+              <div class="mb-2">
+                <button class="botaocadastro" id="cliente-button" class="custom-button">Contratante</button>
+              </div>
+              <div class="mb-2">
+                <button class="botaocadastro" id="vendedor-button" class="custom-button">Músico</button>
+              </div>
             </div>
+            <!-- Botão Voltar -->
+            <button id="voltar-button" style="display: none;">Voltar</button>
+
+            <!-- Formulário do Contratante -->
+            <div id="cliente-form" class="form-section">
+              <h2>Informações do Contratante</h2>
+              <form id="form-cliente" action="/usuarios" method="post">
+                <!-- Campos do cliente ... -->
+                <div class="form-group text-center">
+                  <label for="nome_cliente" class="purple-input-label">Nome:</label>
+                  <input type="text" name="nome" id="nome_cliente" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="idade_cliente" class="purple-input-label">Idade:</label>
+                  <input type="number" name="idade" id="idade_cliente" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="email_cliente" class="purple-input-label">E-mail:</label>
+                  <input type="text" name="email" id="email_cliente" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="senha_cliente" class="purple-input-label">Senha:</label>
+                  <input type="password" name="senha" id="senha_cliente" class="form-control">
+              </div>
+                <button type="button" id="submit-cliente-button" style="display: none;">Enviar</button>
+              </form>
+            </div>
+
+            <!-- Formulário do Músico -->
+            <div id="vendedor-form" class="form-section">
+              <h2>Informações do Músico</h2>
+              <form id="form-vendedor" action="/usuarios" method="post">
+                <!-- Campos do musico ... -->
+                <div class="form-group text-center">
+                  <label for="nome_vendedor" class="purple-input-label">Nome artístico:</label>
+                  <input type="text" name="nome" id="nome_vendedor" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="idade_vendedor" class="purple-input-label">Idade:</label>
+                  <input type="number" name="idade" id="idade_vendedor" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="email_vendedor" class="purple-input-label">E-mail:</label>
+                  <input type="text" name="email" id="email_vendedor" class="form-control">
+              </div>
+              <div class="form-group text-center">
+                  <label for="senha_vendedor" class="purple-input-label">Senha:</label>
+                  <input type="password" name="senha" id="senha_vendedor" class="form-control">
+              </div>
+                <button type="button" id="submit-vendedor-button" style="display: none;">Enviar</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <footer class="footer footer-big footer-color-black" data-color="black">    
     <div class="container">
@@ -359,12 +348,14 @@
     const voltarButton = document.getElementById('voltar-button');
     const clienteForm = document.getElementById('cliente-form');
     const vendedorForm = document.getElementById('vendedor-form');
-    const submitButton = document.getElementById('submit-button');
+    const submitClienteButton = document.getElementById('submit-cliente-button');
+    const submitVendedorButton = document.getElementById('submit-vendedor-button');
 
     clienteButton.addEventListener('click', () => {
       clienteForm.classList.add('active');
       vendedorForm.classList.remove('active');
-      submitButton.style.display = 'block';
+      submitClienteButton.style.display = 'block';
+      submitVendedorButton.style.display = 'none';
       voltarButton.style.display = 'block';
       clienteButton.style.display = 'none';
       vendedorButton.style.display = 'none';
@@ -373,7 +364,8 @@
     vendedorButton.addEventListener('click', () => {
       clienteForm.classList.remove('active');
       vendedorForm.classList.add('active');
-      submitButton.style.display = 'block';
+      submitClienteButton.style.display = 'none';
+      submitVendedorButton.style.display = 'block';
       voltarButton.style.display = 'block';
       clienteButton.style.display = 'none';
       vendedorButton.style.display = 'none';
@@ -382,14 +374,21 @@
     voltarButton.addEventListener('click', () => {
       clienteForm.classList.remove('active');
       vendedorForm.classList.remove('active');
-      submitButton.style.display = 'none';
+      submitClienteButton.style.display = 'none';
+      submitVendedorButton.style.display = 'none';
       voltarButton.style.display = 'none';
       clienteButton.style.display = 'block';
       vendedorButton.style.display = 'block';
     });
 
-    submitButton.addEventListener('click', () => {
-      // Implemente a lógica para enviar o formulário aqui
+    submitClienteButton.addEventListener('click', () => {
+      // Implemente a lógica para enviar o formulário do cliente aqui
+      document.getElementById('form-cliente').submit();
+    });
+
+    submitVendedorButton.addEventListener('click', () => {
+      // Implemente a lógica para enviar o formulário do músico aqui
+      document.getElementById('form-vendedor').submit();
     });
 
 
