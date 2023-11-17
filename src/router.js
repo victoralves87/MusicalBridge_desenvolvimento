@@ -54,14 +54,25 @@ router.get("/sobre.ejs", (req, res) => {
 
 
 // Rota POST
+// Rota POST
 router.post("/usuarios", async (req, res) => {
   const user = req.body;
 
+  // Verifica se o email é "admin" e a senha é "123"
+  if (user.email === 'admin@admin' && user.senha === '123') {
+    // Exibe um alerta indicando login bem-sucedido
+    return res.status(200).send('Login bem-sucedido. Um alerta deveria ser exibido na tela.');
+  }
+
+  // Se não for o login esperado, continua com a lógica original
   if (!user.nome || !user.idade || !user.email || !user.senha) {
     return res.status(400).send('Todos os campos são obrigatórios.');
   }
 
-  await db.insertCustomer (user);
+  // Lógica para inserir o usuário no banco de dados (substitua pela sua implementação)
+  await db.insertCustomer(user);
+
+  // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida
   res.sendStatus(201);
 });
 

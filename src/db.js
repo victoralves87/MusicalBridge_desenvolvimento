@@ -1,7 +1,9 @@
 const mysql = require("mysql2/promise");
 require("dotenv").config();
 
+
 const pool = mysql.createPool(process.env.CONNECTION_STRING);
+
 
 async function insertCustomer(customer) {
   console.log('Dados Recebidos na Função insertCustomer:', customer);
