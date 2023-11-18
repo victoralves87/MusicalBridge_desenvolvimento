@@ -11,6 +11,11 @@ router.get("/", (req, res) => {
   res.redirect("/home");
 });
 
+router.get("/home.ejs", (req, res) => {
+  // Redireciona para a rota do formulário
+  res.redirect("/home");
+});
+
 // Rota GET para o home
 router.get("/home", (req, res) => {
   // Renderiza a página do formulário
@@ -54,7 +59,6 @@ router.get("/sobre.ejs", (req, res) => {
 
 
 // Rota POST
-// Rota POST
 router.post("/usuarios", async (req, res) => {
   const user = req.body;
 
@@ -66,7 +70,7 @@ router.post("/usuarios", async (req, res) => {
 
   // Se não for o login esperado, continua com a lógica original
   if (!user.nome || !user.idade || !user.email || !user.senha) {
-    return res.status(400).send('Todos os campos são obrigatórios.');
+    return res.status(400).send('email ou senha incorreto.');
   }
 
   // Lógica para inserir o usuário no banco de dados (substitua pela sua implementação)
