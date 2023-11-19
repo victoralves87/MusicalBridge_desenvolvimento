@@ -73,7 +73,7 @@ router.post("/usuarios", async (req, res) => {
     return res.status(400).send('email ou senha incorreto.');
   }
 
-  // Lógica para inserir o usuário no banco de dados (substitua pela sua implementação)
+
   await db.insertCustomer(user);
 
   // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida

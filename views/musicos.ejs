@@ -3,40 +3,37 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../imagens-site/logo MB.png">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Musical Bridge</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../imagens-site/logo MB.png">
+
+    <!-- Stylesheets -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <link href="../assets/css/gaia.css" rel="stylesheet"/>
-
-    <!--     Fonts and icons     -->
-    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/meucss.css">
-    <link href="../assets/css/uicons-bold-rounded.css"
-    rel="stylesheet">
-    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/uicons-bold-rounded.css" rel="stylesheet">
     <link href="../assets/css/rotating-card.css" rel="stylesheet" />
-
     <link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/assets/css/font-awesome.min.css" rel="stylesheet" />
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/assets/js/run_prettify.js"></script>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap' rel='stylesheet'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- Additional Styles -->
+    <link rel="stylesheet" href="../assets/css/meucss.css">
     <style>
-        body{
+        body {
             margin-top: 100px;
             background-color: rgba(3, 5, 22, 0.445);
-            
         }
 
-        .centraliza{
+        .centraliza {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,7 +41,7 @@
             margin: 6px;
         }
 
-        .navbar-brand{
+        .navbar-brand {
             text-decoration: none;
         }
 
@@ -62,7 +59,6 @@
             flex: 1;
             padding: 10px;
             border-radius: 10px;
-
         }
 
         #search-button {
@@ -73,10 +69,10 @@
             cursor: pointer;
         }
 
-        .p1{
+        .p1 {
             color: black;
             text-align: center;
-            text-justify:auto;
+            text-justify: auto;
             font-size: bolder;
             font-weight: 1.3em;
         }
@@ -554,25 +550,16 @@
 
 <footer class="footer footer-big footer-color-black" data-color="black">    
     <div class="container">
-        
+        <div class="row">
             <div class="col-md-2 col-md-offset-2 col-sm-3">
-                
                 <div class="info">
-                    
-                    <h5 class="title">Links rapidos</h5>
+                    <h5 class="title">Links Rápidos</h5>
                     <nav>
                         <ul>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="home.ejs">Home</a></li>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="musicos.ejs">Musicos</a>
-                            </li>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="eventos.ejs">Evento</a>
-                            </li>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="login.ejs">Cadastre-se</a>
-                            </li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="home.ejs">Home</a></li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="musicos.ejs">Músicos</a></li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="eventos.ejs">Eventos</a></li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="login.ejs">Cadastre-se</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -580,49 +567,27 @@
             <div class="col-md-2 col-md-offset-1 col-sm-3">
                 <div class="info">
                     <h5 class="title">Sobre a Empresa</h5>
-                     <nav>
+                    <nav>
                         <ul>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="sobre.ejs">Sobre nós</a>
-                            </li>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="#">Contato</a>
-                            </li>
-                            <li>
-                                <a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a>
-                            </li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="sobre.ejs">Sobre nós</a></li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="#">Contato</a></li>
+                            <li><a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
-                
+                <!-- Espaço vazio (conforme original) -->
             </div>
             <div class="col-md-2 col-md-offset-1 col-sm-3">
                 <div class="info">
                     <h5 class="title">Redes Sociais</h5>
                     <nav>
                         <ul>
-                            <li>
-                                <a href="#" class="btn btn-social btn-facebook btn-simple">
-                                    <i class="fa fa-facebook-square"></i> Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-social btn-dribbble btn-simple">
-                                    <i class="fa fa-dribbble"></i> Dribbble
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-social btn-twitter btn-simple">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-social btn-reddit btn-simple">
-                                    <i class="fa fa-google-plus-square"></i> Google+
-                                </a>
-                            </li>
+                            <li><a href="#" class="btn btn-social btn-facebook btn-simple"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                            <li><a href="#" class="btn btn-social btn-dribbble btn-simple"><i class="fa fa-dribbble"></i> Dribbble</a></li>
+                            <li><a href="#" class="btn btn-social btn-twitter btn-simple"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#" class="btn btn-social btn-reddit btn-simple"><i class="fa fa-google-plus-square"></i> Google+</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -635,15 +600,13 @@
     </div>
 </footer>
 
-
-<script src="assets/js/jquery-1.10.2.js"></script>
+<!-- JavaScript Files -->
+<script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/run_prettify.js"></script>
-<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-<script type="text/javascript" src="assets/js/modernizr.js"></script>
+<script src="assets/js/modernizr.js"></script>
 
+<!-- Custom Scripts -->
 <script>
     $().ready(function(){
         $('[rel="tooltip"]').tooltip();
@@ -651,16 +614,14 @@
         $('a.scroll-down').click(function(e){
             e.preventDefault();
             scroll_target = $(this).data('href');
-             $('html, body').animate({
-                 scrollTop: $(scroll_target).offset().top - 60
-             }, 1000);
+            $('html, body').animate({
+                scrollTop: $(scroll_target).offset().top - 60
+            }, 1000);
         });
-
     });
 
     function rotateCard(btn){
         var $card = $(btn).closest('.card-container');
-        console.log($card);
         if($card.hasClass('hover')){
             $card.removeClass('hover');
         } else {
@@ -669,22 +630,18 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-    var menuToggle = document.getElementById("menu-toggle");
-    var navbarCollapse = document.getElementById("myNavbar");
+        var menuToggle = document.getElementById("menu-toggle");
+        var navbarCollapse = document.getElementById("myNavbar");
 
-    menuToggle.addEventListener("click", function () {
-        if (navbarCollapse.classList.contains("in")) {
-            navbarCollapse.classList.remove("in");
-        } else {
-            navbarCollapse.classList.add("in");
-        }
-        console.log("Menu toggle clicked.");
+        menuToggle.addEventListener("click", function () {
+            if (navbarCollapse.classList.contains("in")) {
+                navbarCollapse.classList.remove("in");
+            } else {
+                navbarCollapse.classList.add("in");
+            }
+            console.log("Menu toggle clicked.");
+        });
     });
-});
 </script>
-
-
-
-
 </body>
 </html>
