@@ -53,32 +53,57 @@ router.get("/sobre.ejs", (req, res) => {
   res.render("sobre");
 });
 
+// Rota GET para a página de login
+router.get("/login.ejs", (req, res) => {
+  // Lógica para renderizar a página de login com a possível mensagem de erro
+  res.render("login", { error: req.query.error || undefined });
+});
 
 
 
 
 
-// Rota POST
-router.post("/usuarios", async (req, res) => {
+
+
+
+
+// Rota POST para o login
+router.post("/usuarios/login", async (req, res) => {
   const user = req.body;
 
-  // Verifica se o email é "admin" e a senha é "123"
-  if (user.email === 'admin@admin' && user.senha === '123') {
-    // Exibe um alerta indicando login bem-sucedido
-    return res.status(200).send('Login bem-sucedido. Um alerta deveria ser exibido na tela.');
-  }
+  try {
+    // Verifica se o email e a senha correspondem a um registro no banco de dados
+    const userFromDB = await db.findUserByEmailAndPassword(user.email, user.senha);
 
-  // Se não for o login esperado, continua com a lógica original
-  if (!user.nome || !user.idade || !user.email || !user.senha) {
-    return res.status(400).send('email ou senha incorreto.');
+    if (userFromDB) {
+      // Redireciona para a página home.ejs em caso de sucesso
+      res.redirect("/home");
+    } else {
+      // Adicione um console.log para verificar o fluxo de controle e mensagens de erro
+      console.log("Usuário não encontrado");
+      res.redirect("/login.ejs?error=Email ou senha incorretos");
+    }
+  } catch (error) {
+    // Adicione um console.log para verificar se há erros durante o processo
+    console.error("Erro durante o login:", error);
+    res.redirect("/login.ejs?error=Ocorreu um erro durante o login");
   }
+});
 
+//ROTA POST PARA O CADASTRO
+router.post("/usuarios", async (req, res) => {
+  const user = req.body;
 
   await db.insertCustomer(user);
 
   // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida
   res.sendStatus(201);
 });
+
+
+
+
+
 
 // Rota PATCH
 router.patch("/usuarios/:id", async (req, res) => {

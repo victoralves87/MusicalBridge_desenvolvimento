@@ -50,6 +50,8 @@
 </head>
 
 <body class="fundo-login">
+
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="200">
     <div class="container">
         <div class="navbar-header">
@@ -97,6 +99,12 @@
 </nav>
 
 
+<% if (typeof error !== 'undefined' && error !== null) { %>
+  <p><%= error %></p>
+<% } %>
+
+
+
   <!-- Conteúdo da sua página aqui -->
   <div class="login">
     <div class="content-wrapper">
@@ -130,13 +138,13 @@
                     </div>
                   </div>
                   <div class="card-body">
-                    <form role="form" class="text-start" action="/usuarios" method="post">
+                    <form role="form" class="text-start" action="/usuarios/login" method="post">
                       <div class="input-group input-group-outline my-3">
-                        <label class="form-label" ></label>Email
+                        <label class="form-label" ></label>Email: 
                         <input name="email" type="email" class="form-control">
                       </div>
                       <div class="input-group input-group-outline mb-3">
-                        <label class="form-label"></label>Password
+                        <label class="form-label"></label>Password:   
                         <input name="senha" type="password" class="form-control">
                       </div>
                       <div class="form-check form-switch d-flex align-items-center mb-3">

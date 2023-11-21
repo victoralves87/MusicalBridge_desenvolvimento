@@ -33,10 +33,28 @@ async function deleteCustomer(id) {
   await pool.query("DELETE FROM usuarios WHERE id=?", [id]);
 }
 
+
+async function findUserByEmailAndPassword(email, senha) {
+  try {
+    // Execute a consulta SQL para encontrar o usuário pelo email e senha
+    const [rows] = await pool.query("SELECT * FROM usuarios WHERE email = ? AND senha = ?", [email, senha]);
+
+    // Verifica se há um usuário com o email e senha fornecidos
+    if (rows.length > 0) {
+      return rows[0]; // Retorna o primeiro usuário encontrado
+    } else {
+      return null; // Retorna null se nenhum usuário for encontrado
+    }
+  } catch (error) {
+    throw error; // Lança qualquer erro que ocorra durante a consulta
+  }
+}
+
 module.exports = {
   selectCustomers,
   selectCustomer,
   insertCustomer,
   updateCustomer,
   deleteCustomer,
+  findUserByEmailAndPassword,
 };
