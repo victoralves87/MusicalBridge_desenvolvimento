@@ -35,11 +35,7 @@ router.get("/eventos.ejs", (req, res) => {
   res.render("eventos");
 });
 
-// Rota GET para a página de login
-router.get("/login.ejs", (req, res) => {
-  // Lógica para renderizar a página de login
-  res.render("login");
-});
+
 
 // Rota GET para a página de cadastro
 router.get("/cadastre.ejs", (req, res) => {
@@ -79,26 +75,43 @@ router.post("/usuarios/login", async (req, res) => {
       // Redireciona para a página home.ejs em caso de sucesso
       res.redirect("/home");
     } else {
-      // Adicione um console.log para verificar o fluxo de controle e mensagens de erro
-      console.log("Usuário não encontrado");
-      res.redirect("/login.ejs?error=Email ou senha incorretos");
+      // Se o usuário não for encontrado, renderiza a página de login com a mensagem de erro
+      res.render("login", { error: "Email ou senha incorretos" });
     }
   } catch (error) {
     // Adicione um console.log para verificar se há erros durante o processo
     console.error("Erro durante o login:", error);
-    res.redirect("/login.ejs?error=Ocorreu um erro durante o login");
+    // Se ocorrer um erro durante o processo, renderiza a página de login com a mensagem de erro
+    res.render("login", { error: "Ocorreu um erro durante o login" });
   }
 });
 
-//ROTA POST PARA O CADASTRO
+
+// ROTA POST PARA O CADASTRO
 router.post("/usuarios", async (req, res) => {
-  const user = req.body;
+  try {
+    const user = req.body;
 
-  await db.insertCustomer(user);
+    // Verifica se o usuário já existe pelo e-mail
+    const userExists = await db.customerExistsByEmail(user.email);
+    
+    if (userExists) {
+      // Se o usuário já existe, responde com o status 409 (Conflito) indicando que o recurso já existe
+      return res.status(409).json({ message: "Usuário já existe com este e-mail." });
+    }
 
-  // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida
-  res.sendStatus(201);
+    // Insere o novo usuário no banco de dados
+    await db.insertCustomer(user);
+
+    // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida
+    res.status(201).json({ message: "Usuário cadastrado com sucesso." });
+  } catch (error) {
+    console.error("Erro ao cadastrar usuário:", error);
+    // Se ocorrer um erro durante o processo, responde com o status 500 (Internal Server Error)
+    res.status(500).json({ message: "Erro interno ao cadastrar usuário." });
+  }
 });
+
 
 
 

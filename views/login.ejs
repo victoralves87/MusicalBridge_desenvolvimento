@@ -98,13 +98,6 @@
     </div>
 </nav>
 
-
-<% if (typeof error !== 'undefined' && error !== null) { %>
-  <p><%= error %></p>
-<% } %>
-
-
-
   <!-- Conteúdo da sua página aqui -->
   <div class="login">
     <div class="content-wrapper">
@@ -139,6 +132,7 @@
                   </div>
                   <div class="card-body">
                     <form role="form" class="text-start" action="/usuarios/login" method="post">
+                      
                       <div class="input-group input-group-outline my-3">
                         <label class="form-label" ></label>Email: 
                         <input name="email" type="email" class="form-control">

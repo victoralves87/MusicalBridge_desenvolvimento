@@ -5,6 +5,12 @@ require("dotenv").config();
 const pool = mysql.createPool(process.env.CONNECTION_STRING);
 
 
+async function customerExistsByEmail(email) {
+  const [rows, fields] = await pool.execute('SELECT * FROM usuarios WHERE email = ?', [email]);
+  return rows.length > 0; // Retorna true se o usuário existir, false caso contrário
+}
+
+
 async function insertCustomer(customer) {
   console.log('Dados Recebidos na Função insertCustomer:', customer);
 
@@ -57,4 +63,5 @@ module.exports = {
   updateCustomer,
   deleteCustomer,
   findUserByEmailAndPassword,
+  customerExistsByEmail,
 };
