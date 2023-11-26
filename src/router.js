@@ -63,19 +63,24 @@ router.get("/login.ejs", (req, res) => {
 
 
 
-// Rota POST para o login
 router.post("/usuarios/login", async (req, res) => {
   const user = req.body;
 
   try {
     // Verifica se o email e a senha correspondem a um registro no banco de dados
     const userFromDB = await db.findUserByEmailAndPassword(user.email, user.senha);
+    
+    // Verifica se o e-mail já está cadastrado, mas a senha não corresponde
+    const userWithEmail = await db.findUserByEmail(user.email);
 
     if (userFromDB) {
       // Redireciona para a página home.ejs em caso de sucesso
       res.redirect("/home");
+    } else if (userWithEmail) {
+      // Se o e-mail já está cadastrado, mas a senha não corresponde, exibe uma mensagem de erro
+      res.render("login", { error: "Senha incorreta para o e-mail fornecido" });
     } else {
-      // Se o usuário não for encontrado, renderiza a página de login com a mensagem de erro
+      // Se o usuário não for encontrado, renderiza a página de login com a mensagem de erro padrão
       res.render("login", { error: "Email ou senha incorretos" });
     }
   } catch (error) {
@@ -85,6 +90,7 @@ router.post("/usuarios/login", async (req, res) => {
     res.render("login", { error: "Ocorreu um erro durante o login" });
   }
 });
+
 
 
 // ROTA POST PARA O CADASTRO

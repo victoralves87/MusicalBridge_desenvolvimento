@@ -24,10 +24,23 @@ async function selectCustomers() {
 }
 
 async function selectCustomer(id) {
-  const [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ?", [id]);
-  return rows[0];
+  try {
+    const [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ?", [id]);
+    
+    if (rows.length > 0) {
+      return rows[0];
+    } else {
+      return null; // Retorna null se nenhum usuário for encontrado
+    }
+  } catch (error) {
+    throw error; // Lança qualquer erro que ocorra durante a consulta
+  }
 }
 
+async function findUserByEmail(email) {
+  const [rows] = await pool.execute('SELECT * FROM usuarios WHERE email = ?', [email]);
+  return rows.length > 0 ? rows[0] : null;
+}
 
 
 async function updateCustomer(id, customerData) {
@@ -42,17 +55,16 @@ async function deleteCustomer(id) {
 
 async function findUserByEmailAndPassword(email, senha) {
   try {
-    // Execute a consulta SQL para encontrar o usuário pelo email e senha
     const [rows] = await pool.query("SELECT * FROM usuarios WHERE email = ? AND senha = ?", [email, senha]);
 
-    // Verifica se há um usuário com o email e senha fornecidos
     if (rows.length > 0) {
-      return rows[0]; // Retorna o primeiro usuário encontrado
+      return rows[0];
     } else {
-      return null; // Retorna null se nenhum usuário for encontrado
+      return null;
     }
   } catch (error) {
-    throw error; // Lança qualquer erro que ocorra durante a consulta
+    console.error("Erro ao encontrar usuário por e-mail e senha:", error);
+    throw new Error("Erro durante a autenticação do usuário");
   }
 }
 
@@ -64,4 +76,6 @@ module.exports = {
   deleteCustomer,
   findUserByEmailAndPassword,
   customerExistsByEmail,
+  findUserByEmail,
+  
 };

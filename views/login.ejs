@@ -50,8 +50,6 @@
 </head>
 
 <body class="fundo-login">
-
-
   <nav class="navbar fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="200">
     <div class="container">
         <div class="navbar-header">
@@ -130,9 +128,14 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="card-body">
                     <form role="form" class="text-start" action="/usuarios/login" method="post">
-                      
+                      <% if (error) { %>
+                      <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                      </div>
+                    <% } %>
                       <div class="input-group input-group-outline my-3">
                         <label class="form-label" ></label>Email: 
                         <input name="email" type="email" class="form-control">
