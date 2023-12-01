@@ -61,15 +61,14 @@ router.get("/login.ejs", (req, res) => {
 
 
 
-
-
+//ROTA POST TELA LOGIN
 router.post("/usuarios/login", async (req, res) => {
   const user = req.body;
 
   try {
     // Verifica se o email e a senha correspondem a um registro no banco de dados
     const userFromDB = await db.findUserByEmailAndPassword(user.email, user.senha);
-    
+
     // Verifica se o e-mail já está cadastrado, mas a senha não corresponde
     const userWithEmail = await db.findUserByEmail(user.email);
 
@@ -86,10 +85,12 @@ router.post("/usuarios/login", async (req, res) => {
   } catch (error) {
     // Adicione um console.log para verificar se há erros durante o processo
     console.error("Erro durante o login:", error);
-    // Se ocorrer um erro durante o processo, renderiza a página de login com a mensagem de erro
+
+    // Renderiza a página de login com a mensagem de erro
     res.render("login", { error: "Ocorreu um erro durante o login" });
   }
 });
+
 
 
 

@@ -132,10 +132,10 @@
                   <div class="card-body">
                     <form role="form" class="text-start" action="/usuarios/login" method="post">
                       <% if (error) { %>
-                      <div class="alert alert-danger" role="alert">
-                        <%= error %>
-                      </div>
-                    <% } %>
+                        <div class="alert alert-danger" role="alert">
+                          <%= error %>
+                        </div>
+                      <% } %>
                       <div class="input-group input-group-outline my-3">
                         <label class="form-label" ></label>Email: 
                         <input name="email" type="email" class="form-control">
