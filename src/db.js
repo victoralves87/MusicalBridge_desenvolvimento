@@ -39,7 +39,7 @@ async function selectCustomer(id) {
 
 async function findUserByEmail(email) {
   const [rows] = await pool.execute('SELECT * FROM usuarios WHERE email = ?', [email]);
-  return rows.length > 0 ? rows[0] : null;
+  return rows.length > 0 ? true : false;
 }
 
 

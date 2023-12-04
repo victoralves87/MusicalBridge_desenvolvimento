@@ -38,7 +38,7 @@ router.get("/eventos.ejs", (req, res) => {
 
 
 // Rota GET para a página de cadastro
-router.get("/cadastre.ejs", (req, res) => {
+router.get("/cadastre", (req, res) => {
   // Lógica para renderizar a página de cadastro
   res.render("cadastre");
 });
@@ -50,7 +50,7 @@ router.get("/sobre.ejs", (req, res) => {
 });
 
 // Rota GET para a página de login
-router.get("/login.ejs", (req, res) => {
+router.get("/login", (req, res) => {
   // Lógica para renderizar a página de login com a possível mensagem de erro
   res.render("login", { error: req.query.error || undefined });
 });
@@ -65,14 +65,20 @@ router.get("/login.ejs", (req, res) => {
 router.post("/usuarios/login", async (req, res) => {
   const user = req.body;
 
+  console.log("###### caiu aqui")
+
+  console.log( user );
+
   try {
     // Verifica se o email e a senha correspondem a um registro no banco de dados
     const userFromDB = await db.findUserByEmailAndPassword(user.email, user.senha);
 
+    console.log( userFromDB )
+
     // Verifica se o e-mail já está cadastrado, mas a senha não corresponde
     const userWithEmail = await db.findUserByEmail(user.email);
 
-    if (userFromDB) {
+    if (userFromDB != undefined || userFromDB != null) {
       // Redireciona para a página home.ejs em caso de sucesso
       res.redirect("/home");
     } else if (userWithEmail) {
@@ -83,11 +89,16 @@ router.post("/usuarios/login", async (req, res) => {
       res.render("login", { error: "Email ou senha incorretos" });
     }
   } catch (error) {
-    // Adicione um console.log para verificar se há erros durante o processo
-    console.error("Erro durante o login:", error);
 
-    // Renderiza a página de login com a mensagem de erro
-    res.render("login", { error: "Ocorreu um erro durante o login" });
+      console.log(error);
+      // Adicione um console.log para verificar se há erros durante o processo
+      console.error("Erro durante o login:", error);
+
+      // Renderiza a página de login com a mensagem de erro
+      
+      //res.redirect("/login");
+      
+      res.render("login", { error: "Ocorreu um erro durante o login" });
   }
 });
 

@@ -21,7 +21,7 @@ app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/js", express.static(path.join(__dirname, "assets", "js")));
 
 // Middleware para servir imagens da pasta "imagem site"
-app.use("/imagens-site", express.static(path.join(__dirname, "imagens-site")));
+app.use("/imagens-site", express.static(path.join(__dirname, "../assets/imagem-site")));
 
 // Usando o roteador
 app.use("/", router);
