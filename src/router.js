@@ -65,7 +65,7 @@ router.get("/login", (req, res) => {
 router.post("/usuarios/login", async (req, res) => {
   const user = req.body;
 
-  console.log("###### caiu aqui")
+  
 
   console.log( user );
 
