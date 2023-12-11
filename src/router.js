@@ -121,8 +121,8 @@ router.post("/usuarios", async (req, res) => {
     // Insere o novo usuário no banco de dados
     await db.insertCustomer(user);
 
-    // Responde com o status 201 (Created) indicando que a criação do recurso foi bem-sucedida
-    res.status(201).json({ message: "Usuário cadastrado com sucesso." });
+     // Redireciona para a página de login após o cadastro bem-sucedido
+     res.redirect("/login")
   } catch (error) {
     console.error("Erro ao cadastrar usuário:", error);
     // Se ocorrer um erro durante o processo, responde com o status 500 (Internal Server Error)
