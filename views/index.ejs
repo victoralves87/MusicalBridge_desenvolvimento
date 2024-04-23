@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Musical Bridge</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../imagens-site/logo MB.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/css/gaia.css" />
+    <link rel="stylesheet" href="../assets/css/meucss.css">
+    <link rel="stylesheet" href="../assets/css/uicons-bold-rounded.css">
+    <link rel="stylesheet" href="../assets/css/rotating-card.css" />
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Material Dashboard -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/material-dashboard-bs4/assets/css/material-dashboard.css">
+    <!-- Bootstrap and other styles -->
+    <link href="/website/css/uicons-bold-rounded.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/../assets/css/bootstrap.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/material-dashboard-bs4/assets/css/material-dashboard.css">
+
+    <style>
+        body {
+          padding-top: -50px; 
+        }
+      
+        /* Ajuste a margem da primeira seção para criar espaço para a barra de navegação fixa */
+        .section-header {
+          margin-top: -60px; /* Você pode ajustar o valor com base no seu design */
+        }
+      </style>
+      
+</head>
+
+<body>
+
+    <nav  class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a style="color: rgb(218, 160, 14);" class="logo" href="home.ejs" class="navbar-brand">
+                    Musical-Bridge
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li>
+                        <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="home.ejs">Home</a>
+                    </li>
+                <li>
+                    <a style="color: rgb(218, 160, 14); font-weight: bolder;"  href="musicos.ejs">Musicos</a>
+                </li>
+                <li>
+                    <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="eventos.ejs">Eventos</a>
+                </li>
+                <li>
+                    <a style="color: rgb(231, 170, 17); font-weight: bolder;" href="login">Entrar</a>
+                </li>
+                <li>
+                    <a style="background-color: rgba(148, 5, 167, 0.39); border-color:rgba(148, 5, 167, 0.582) ;" href="cadastre" class="btn btn-danger btn-fill">Cadastre-se</a>
+                </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <img src="../assets/imagem-site/usuario-do-circulo.png" alt="perfil">
+                        </a>
+                        <!-- Itens do menu dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Meu Perfil</a> <br>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="section section-header">
+        <div class="parallax filter filter-color-black">
+            <div class="image"
+                style="background-image: url('../assets/imagem-site/pexels-luis-quintero-2257474.jpg')">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="title-area">
+                        <h1 class="title-modern">Musical-Bridge</h1>
+                        <h3 style="font-weight: bolder;" >Encontre a Banda ou o Musico perfeito para seu evento!!</h2>
+                        <div class="separator line-separator">♫</div>
+                    </div>
+
+                    <div class="button-get-started">
+                        <a style="background-color: rgba(170, 6, 192, 0.849); border-color:rgba(148, 5, 167, 0.582) ; color: aliceblue;" href="cadastre" _blank" class="btn btn-white btn-fill btn-lg ">
+                            CADASTRE-SE
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="section">
+        
+            <div class="container">
+                <div class="row">
+        
+                    <div class="title-area">
+                        <h2>Como funciona</h2>
+                        <div class="separator separator-danger">♫</div>
+                        <p class="description"><span class="paragrafo">Aqui se encontra um modelo simples e simplificado de como funciona nosso site.</span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="info-icon">
+                            <div class="icon text-danger">
+                                <img src="../assets/imagem-site/usuarios.png" alt="usuario">
+                            </div>
+                            <h3>Cadastre-se em nosso sistema</h3>
+                            <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-icon">
+                            <div class="icon text-danger">
+                                <img src="../assets/imagem-site/estrela-do-calendario.png" alt="">
+                            </div>
+                            <h3>Selecione um evento</h3>
+                            <p class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-icon">
+                            <div class="icon text-danger">
+                                <img src="../assets/imagem-site/verificacao-do-usuario.png" alt="">
+                            </div>
+                            <h3>Selecione um freelancer</h3>
+                            <p class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-our-team-freebie">
+        <div class="parallax filter filter-color-black">
+            <div class="image" style="background-image:url('../assets/imagem-site/pexels-caleb-oquendo-2927080\ \(1\).jpg')">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <h2>Nossa equipe</h2>
+                            <div class="separator separator-danger">♫</div>
+                            <p class="description">Conheça um pouco do nosso teame</p>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/faces/Eliakinn.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Eliakinn Enoque</h3>
+                                                    <p class="small-text">CEO / Co-Founder / Producer Disigner</p>
+                                                    <p class="description">Eliakinn Enoque é uma pessoa de mente brilhante e coração generoso.
+                                                         Sua determinação e paixão pelo conhecimento são evidentes em todas as suas empreitadas. 
+                                                         Com uma habilidade inata para inspirar os outros,
+                                                          Eliakinn é um líder natural. Sua dedicação aos seus objetivos e sua capacidade de enfrentar desafios o 
+                                                          tornam uma presença inspiradora em qualquer equipe. Além disso,
+                                                           sua gentileza e empatia o tornam uma pessoa querida por todos que têm a sorte de conhecê-lo. 
+                                                           Eliakinn Enoque é verdadeiramente uma pessoa especial, 
+                                                        e seu impacto positivo é sentido por todos ao seu redor.".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/faces/victor.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Victor Alves</h3>
+                                                    <p class="small-text">Product Designer/Back-ender / Co-fuouder</p>
+                                                    <p class="description">Victor Alves é conhecido por sua criatividade e habilidades excepcionais de comunicação.
+                                                         Sua capacidade de pensar fora da caixa traz uma perspectiva única para cada projeto.
+                                                          Com uma atitude proativa e uma mente inquisitiva, 
+                                                        Victor é essencial para a inovação e o progresso da equipe.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/faces/gabriel.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Gabriel Serafim</h3>
+                                                    <p class="small-text">Product Designer / Co-fuouder</p>
+                                                    <p class="description">Gabriel Serafin é um profissional altamente dedicado e comprometido. 
+                                                        Sua habilidade em resolver problemas e sua atenção aos detalhes fazem dele um membro valioso da equipe. 
+                                                        Sempre disposto a assumir responsabilidades extras para garantir o sucesso do projeto, Gabriel é um verdadeiro líder.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/faces/andre.jpg"/>
+                                                </div> -->
+                                                <!-- <div class="description">
+                                                    <h3 class="title">André Luiz</h3>
+                                                    <p class="small-text">Product Designer </p>
+                                                    <p class="description">André Luiz é um membro confiável e confiável da equipe. 
+                                                        Sua ética de trabalho impecável e sua capacidade de manter a calma sob pressão são admiráveis. 
+                                                        Com uma habilidade notável para colaborar e um forte senso de responsabilidade, 
+                                                        André é um ativo inestimável para qualquer projeto.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/faces/raphel.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Raphael Cabral</h3>
+                                                    <p class="small-text">Product Designer </p>
+                                                    <p class="description">Gabriel Serafin é um profissional altamente dedicado e comprometido. 
+                                                        Sua habilidade em resolver problemas e sua atenção aos detalhes fazem dele um membro valioso da equipe. 
+                                                        Sempre disposto a assumir responsabilidades extras para garantir o sucesso do projeto, Gabriel é um verdadeiro líder.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-small section-get-started">
+        <div class="parallax filter">
+            <div class="image"
+                style="background-image: url('../assets/imagem-site/logom.png')">
+            </div>
+            <div class="container">
+                <div class="title-area">
+                    <h2 class="text-white">Quer saber um pouco mais sobre Nós?</h2>
+                    <div class="separator line-separator">♫</div>
+                    <p class="description">Clique no botão abaixo :)</p>
+                </div>
+
+                <div class="button-get-started">
+                    <a style="background-color: rgba(170, 6, 192, 0.849); border-color:rgba(148, 5, 167, 0.534) ; color: aliceblue; margin-top: 95px;"   href="sobre.ejs" class="btn btn-danger btn-fill btn-lg">Sobre Nós</a>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <footer class="footer footer-big footer-color-black" data-color="black">    
+        <div class="container">
+            
+                <div class="col-md-2 col-md-offset-2 col-sm-3">
+                    
+                    <div class="info">
+                        
+                        <h5 class="title">Links rapidos</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="home.ejs">Home</a></li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="musicos.ejs">Musicos</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="eventos.ejs">Evento</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="login">Cadastre-se</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Sobre a Empresa</h5>
+                         <nav>
+                            <ul>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="sobre.ejs">Sobre nós</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Contato</a>
+                                </li>
+                                <li>
+                                    <a style="font-weight: bold; color: aliceblue;" href="#">Termos &amp; Condições</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Redes Sociais</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                        <i class="fa fa-facebook-square"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                        <i class="fa fa-dribbble"></i> Dribbble
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                        <i class="fa fa-google-plus-square"></i> Google+
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script> Musical-Bridge, feito para você
+            </div>
+        </div>
+    </footer>
+    
+     <!-- Core JS Files -->
+     <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+     <script src="../assets/js/popper.min.js" type="text/javascript"></script>
+     <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+     <script type="text/javascript" src="../assets/js/modernizr.js"></script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+     <script type="text/javascript" src="../assets/js/gaia.js"></script>
+</body>
+</html>
