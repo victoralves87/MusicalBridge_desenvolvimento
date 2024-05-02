@@ -1,10 +1,9 @@
 {
   "name": "back-musicalbridge",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon index"
+    "start": "npx nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,9 @@
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.19.1",
-    "mysql2": "^3.6.3"
-  }
+    "mysql2": "^3.6.3",
+    "node": "^16.0.0",
+    "nodemon": "^3.1.0"
+  },
+  "description": "Descrição do seu projeto aqui"
 }
