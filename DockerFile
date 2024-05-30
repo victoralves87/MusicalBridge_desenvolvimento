@@ -1,0 +1,20 @@
+# Use uma imagem Node.js mais recente como base
+FROM node:16
+
+# Defina o diretório de trabalho dentro da imagem
+WORKDIR /app
+
+# Copie o package.json e package-lock.json para o diretório de trabalho
+COPY package*.json ./
+
+# Instale as dependências do aplicativo
+RUN npm install
+
+# Copie o resto dos arquivos do projeto para o diretório de trabalho
+COPY . .
+
+# Exponha a porta 3002 para o mundo exterior
+EXPOSE 3002
+
+# Comando padrão para iniciar o aplicativo
+CMD ["node", "index.js"]
