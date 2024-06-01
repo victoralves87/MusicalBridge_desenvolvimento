@@ -1,18 +1,24 @@
-version: '3.3'
+version: '3.8'
+
 services:
   app:
-    build: .
+    image: node:16.14.0
+    restart: always
+    working_dir: /usr/src/app
     ports:
       - "3002:3002"
-    depends_on:
-      - db
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: "bash -c 'npm install && npm audit fix && npm start'"
+
   db:
     image: mysql:8.0.32
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: banco123
       MYSQL_DATABASE: banco_musical_bridge
-      MYSQL_USER: root
-      MYSQL_PASSWORD: banco123
     ports:
-      - "3306:3306"
+      - "3307:3306"
+    volumes:
+      - ./db:/var/lib/mysql
