@@ -2,15 +2,15 @@ version: '3.8'
 
 services:
   app:
-    image: node:16.14.0
+    image: node:18.20.2
     restart: always
     working_dir: /usr/src/app
     ports:
-      - "3002:3002"
+      - "80:3002"
     volumes:
       - .:/usr/src/app
-      - /usr/src/app/node_modules
-    command: "bash -c 'npm install && npm audit fix && npm start'"
+      - ./node_modules:/usr/src/app/node_modules
+    command: bash -c 'npm cache clean --force && npm install && npm start'
 
   db:
     image: mysql:8.0.32
