@@ -5,16 +5,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-  <meta charset="utf-8" />
   <link rel="icon" type="image/png" sizes="96x96" href="../imagens-site/logo MB.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <link href="../assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="../assets/css/gaia.css" rel="stylesheet"/>
-
-  <!--     Fonts and icons     -->
+  <link href="../assets/css/gaia.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,85 +17,74 @@
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/../assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="../assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/meucss.css">
-  <link href="/website/css/uicons-bold-rounded.css"
-  rel="stylesheet">
-  <link href="../css/bootstrap.css" rel="stylesheet" />
-  <link href="../css/rotating-card.css" rel="stylesheet" />
+  <link href="/website/css/uicons-bold-rounded.css" rel="stylesheet">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://demos.creative-tim.com/material-dashboard-bs4/assets/css/material-dashboard.css">
-
-  <title>
-    login
-  </title>
-
-  <!-- Fonts and icons -->
+  <title>login</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
-  <!-- Nepcha Analytics (nepcha.com) -->
-  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+
+  <style>
+    .navbar-collapse {
+    justify-content: flex-end; /* Alinha o menu à direita por padrão */
+    }
+  </style>
 </head>
 
 <body class="fundo-login">
   <nav class="navbar fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="200">
     <div class="container">
-        <div class="navbar-header">
-            <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar bar1"></span>
-                <span class="icon-bar bar2"></span>
-                <span class="icon-bar bar3"></span>
-            </button>
-            <a style="color: rgb(218, 160, 14);" class="logo" href="home.ejs" class="navbar-brand">
-                Musical-Bridge
+      <div class="navbar-header">
+        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar bar1"></span>
+          <span class="icon-bar bar2"></span>
+          <span class="icon-bar bar3"></span>
+        </button>
+        <a style="color: rgb(218, 160, 14); font-size: 2.5rem;" class="logo navbar-brand" href="home.ejs">
+          Musical-Bridge
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="example">
+        <ul class="nav navbar-nav navbar-right navbar-uppercase">
+          <li>
+            <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="home.ejs">Home</a>
+          </li>
+          <li>
+            <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="musicos.ejs">Musicos</a>
+          </li>
+          <li>
+            <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="eventos.ejs">Eventos</a>
+          </li>
+          <li>
+            <a style="color: rgb(231, 170, 17); font-weight: bolder;" href="login">Entrar</a>
+          </li>
+          <li>
+            <a style="background-color: rgba(148, 5, 167, 0.39); border-color:rgba(148, 5, 167, 0.582);" href="cadastre" class="btn btn-danger btn-fill">Cadastre-se</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../assets/imagem-site/usuario-do-circulo.png" alt="perfil">
             </a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                <li>
-                    <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="home.ejs">Home</a>
-                </li>
-                <li>
-                    <a style="color: rgb(218, 160, 14); font-weight: bolder;"  href="musicos.ejs">Musicos</a>
-                </li>
-                <li>
-                    <a style="color: rgb(218, 160, 14); font-weight: bolder;" href="eventos.ejs">Eventos</a>
-                </li>
-                <li>
-                    <a style="color: rgb(231, 170, 17); font-weight: bolder;" href="login">Entrar</a>
-                </li>
-                <li>
-                    <a style="background-color: rgba(148, 5, 167, 0.39); border-color:rgba(148, 5, 167, 0.582) ;" href="cadastre" class="btn btn-danger btn-fill">Cadastre-se</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img src="../assets/imagem-site/usuario-do-circulo.png" alt="perfil">
-                  </a>
-                  <!-- Itens do menu dropdown -->
-                  <div class="dropdown-menu" aria-labelledby="userDropdown">
-                      <a class="dropdown-item" href="#">Meu Perfil</a> <br>
-                      <a class="dropdown-item" href="#">Sair</a>
-                  </div>
-              </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Meu Perfil</a>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
-  <!-- Conteúdo da sua página aqui -->
   <div class="login">
     <div class="content-wrapper">
       <main class="main-content mt-0">
-        <div class=" page-header align-items-start min-vh-100" style="background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
           <span class="mask bg-gradient-dark opacity-6"></span>
           <div class="container my-auto">
             <div class="row">
@@ -128,7 +112,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="card-body">
                     <form role="form" class="text-start" action="/usuarios/login" method="post">
                       <% if (error) { %>
@@ -137,11 +120,11 @@
                         </div>
                       <% } %>
                       <div class="input-group input-group-outline my-3">
-                        <label class="form-label" ></label>Email: 
+                        <label class="form-label">Email:</label>
                         <input name="email" type="email" class="form-control">
                       </div>
                       <div class="input-group input-group-outline mb-3">
-                        <label class="form-label"></label>Password:   
+                        <label class="form-label">Password:</label>
                         <input name="senha" type="password" class="form-control">
                       </div>
                       <div class="form-check form-switch d-flex align-items-center mb-3">
@@ -165,22 +148,24 @@
       </main>
     </div>
   </div>
- 
+
   <footer class="footer footer-big footer-color-black" data-color="black">
     <div class="container">
-      <div class="col-md-2 col-md-offset-2 col-sm-3">
-        <div class="info">
-          <h5 class="title">Links rapidos</h5>
-          <nav>
-            <ul>
-              <li>
-                <a style="font-weight: bold; color: aliceblue;" href="index.html">Home</a></li>
-              <li>
-                <a style="font-weight: bold; color: aliceblue;" href="musicos.html">Musicos</a>
-              </li>
-              <li>
-                <a style="font-weight: bold; color: aliceblue;" href="eventos.html">Evento</a>
-              </li>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="info">
+            <h5 class="title">Links rapidos</h5>
+            <nav>
+              <ul>
+                <li>
+                  <a style="font-weight: bold; color: aliceblue;" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a style="font-weight: bold; color: aliceblue;" href="musicos.html">Musicos</a>
+                </li>
+                <li>
+                  <a style="font-weight: bold; color: aliceblue;" href="eventos.html">Evento</a>
+                </li>
               <li>
                 <a style="font-weight: bold; color: aliceblue;" href="login.html">Cadastre-se</a>
               </li>
