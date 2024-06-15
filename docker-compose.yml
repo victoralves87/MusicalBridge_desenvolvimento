@@ -11,10 +11,6 @@ services:
       - .:/usr/src/app
       - ./node_modules:/usr/src/app/node_modules
     command: bash -c 'npm cache clean --force && npm install && npm start'
-    environment:
-      - CONNECTION_STRING=mysql://root:banco123@db:3306/banco_musical_bridge
-    depends_on:
-      - db
 
   db:
     image: mysql:8.0.32
@@ -23,6 +19,6 @@ services:
       MYSQL_ROOT_PASSWORD: banco123
       MYSQL_DATABASE: banco_musical_bridge
     ports:
-      - "3306:3306"  # Utilize a porta padrão 3306 para dentro e fora do container
+      - "3306:3306"
     volumes:
       - ./db:/var/lib/mysql
